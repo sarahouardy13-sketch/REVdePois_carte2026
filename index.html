@@ -136,7 +136,7 @@ header span { font-size: 11px; color: #888; margin-left: auto; }
       <p>Légende</p>
       <div class="leg-row"><div class="leg-sq" style="background:#3730A3"></div> Station expérimentale</div>
       <div class="leg-row"><div class="leg-dot" style="background:#2E7D32"></div> Ferme — implication forte (agriculteur et/ou conseiller)</div>
-      <div class="leg-row"><div class="leg-dot" style="background:#D97706"></div> Ferme - peu de suivi (Eureden)</div>
+      <div class="leg-row"><div class="leg-dot" style="background:#D97706"></div> Ferme — implication partielle</div>
       <div class="leg-row"><div class="leg-dot" style="background:#DC2626"></div> Ferme — essai non récolté</div>
     </div>
   </div>
@@ -283,12 +283,12 @@ const sites = [
   },
 
   {
-    id: "argentre", type: "ferme", statut: "exploitable", lat: 48.0568, lng: -1.1551,
+    id: "argentre", type: "ferme", statut: "partiel", lat: 48.0568, lng: -1.1551,
     nom: "Anthony Texier", dep: "Argentré-du-Plessis (35)",
-    color: "#2E7D32", shape: "circle",
+    color: "#D97706", shape: "circle",
     badge: "UFAB",
     html: `
-      <span class="pill pill-exploitable">Ferme — données à interpréter avec prudence · Suivi UFAB / CA35</span>
+      <span class="pill pill-partiel">Ferme — données à interpréter avec prudence · Suivi UFAB / CA35</span>
       <div class="section-label">Exploitant</div>
       <div class="info-row"><span class="lbl">Nom</span><span class="val">Anthony Texier (EI)</span></div>
       <div class="info-row"><span class="lbl">Surface</span><span class="val">37 ha cultures et prairies</span></div>
@@ -304,7 +304,7 @@ const sites = [
       <div class="info-row"><span class="lbl">Densité pois</span><span class="val">90 gr/m²</span></div>
       <div class="info-row"><span class="lbl">Densité orge</span><span class="val">75 gr/m²</span></div>
       <div class="info-row"><span class="lbl">Herse étrille</span><span class="val">J+15, passage agressif, pertes de pieds</span></div>
-      <div class="info-row"><span class="lbl">Récolte</span><span class="val">Batteuse non adaptée aux bandes, reports entre bandes possibles</span></div>
+      <div class="info-row"><span class="lbl">Récolte</span><span class="val">⚠ Batteuse non adaptée aux bandes, reports entre bandes possibles</span></div>
       <div class="info-row"><span class="lbl">Projet semence</span><span class="val">Récolte 2026 destinée à des semences de ferme, problème de bruche signalé</span></div>
       <div class="section-label">Variétés</div>
       <div class="var-list">
@@ -316,12 +316,12 @@ const sites = [
   },
 
   {
-    id: "stgeorges", type: "ferme", statut: "exploitable", lat: 48.2736, lng: -1.2911,
+    id: "stgeorges", type: "ferme", statut: "partiel", lat: 48.2736, lng: -1.2911,
     nom: "Martin Pasquier", dep: "Saint-Georges-de-Chesné (35)",
-    color: "#2E7D32", shape: "circle",
+    color: "#D97706", shape: "circle",
     badge: "UFAB",
     html: `
-      <span class="pill pill-exploitable">Ferme — données à interpréter avec prudence · Suivi UFAB / CA35</span>
+      <span class="pill pill-partiel">Ferme — données à interpréter avec prudence · Suivi UFAB / CA35</span>
       <div class="section-label">Exploitant</div>
       <div class="info-row"><span class="lbl">Nom</span><span class="val">Martin Pasquier</span></div>
       <div class="info-row"><span class="lbl">Surface</span><span class="val">106 ha (60 ha cultivés, 46 en herbe)</span></div>
@@ -365,8 +365,8 @@ const sites = [
       <div class="info-row"><span class="lbl">Date de semis</span><span class="val">31 mars 2026</span></div>
       <div class="info-row"><span class="lbl">Date de récolte</span><span class="val">17 juillet 2026</span></div>
       <div class="info-row"><span class="lbl">Précédent</span><span class="val">Maïs, triticale, colza</span></div>
-      <div class="info-row"><span class="lbl">Densité pois</span><span class="val">80 gr/m²</span></div>
-      <div class="info-row"><span class="lbl">Densité orge</span><span class="val">120 gr/m²</span></div>
+      <div class="info-row"><span class="lbl">Densité pois</span><span class="val">80 gr/m² (protocole : 90 gr/m²)</span></div>
+      <div class="info-row"><span class="lbl">Densité orge</span><span class="val">120 gr/m² (protocole : 75 gr/m²)</span></div>
       <div class="info-row"><span class="lbl">Suivi culture</span><span class="val">Aucun suivi intermédiaire, agriculteur peu disponible</span></div>
       <div class="section-label">Variétés et rendements</div>
       <table class="result-table">
@@ -382,12 +382,12 @@ const sites = [
   },
 
   {
-    id: "plufur", type: "ferme", statut: "biensuivi", lat: 48.6069, lng: -3.5758,
+    id: "plufur", type: "ferme", statut: "perdu", lat: 48.6069, lng: -3.5758,
     nom: "Fabien Lebriquer", dep: "Plufur (22)",
-    color: "##D97706", shape: "circle",
+    color: "#DC2626", shape: "circle",
     badge: "Eureden",
     html: `
-      <span class="pill pill-partiel">Ferme — essai suivi non récolté (sangliers) · Eureden</span>
+      <span class="pill pill-perdu">Ferme — essai non récolté (sangliers) · Eureden</span>
       <div class="section-label">Exploitant</div>
       <div class="info-row"><span class="lbl">Nom</span><span class="val">Fabien Lebriquer</span></div>
       <div class="info-row"><span class="lbl">Commune</span><span class="val">Plufur (22)</span></div>
@@ -399,8 +399,8 @@ const sites = [
       <div class="info-row"><span class="lbl">Modalité</span><span class="val">Culture associée pois-orge</span></div>
       <div class="info-row"><span class="lbl">Date de semis</span><span class="val">20 mars 2026</span></div>
       <div class="info-row"><span class="lbl">Précédent</span><span class="val">Maïs grain</span></div>
-      <div class="info-row"><span class="lbl">Densité pois</span><span class="val">80 gr/m²</span></div>
-      <div class="info-row"><span class="lbl">Densité orge</span><span class="val">120 gr/m²</span></div>
+      <div class="info-row"><span class="lbl">Densité pois</span><span class="val">80 gr/m² (protocole : 90 gr/m²)</span></div>
+      <div class="info-row"><span class="lbl">Densité orge</span><span class="val">120 gr/m² (protocole : 75 gr/m²)</span></div>
       <div class="info-row"><span class="lbl">Suivi culture</span><span class="val">Bon suivi, essai en excellent état agronomique</span></div>
       <div class="section-label">Variétés</div>
       <div class="var-list">
@@ -426,8 +426,8 @@ const sites = [
       <div class="info-row"><span class="lbl">Zone climatique</span><span class="val">Précoce</span></div>
       <div class="section-label">Essai</div>
       <div class="info-row"><span class="lbl">Modalité</span><span class="val">Culture associée pois-orge (6 variétés)</span></div>
-      <div class="info-row"><span class="lbl">Densité pois</span><span class="val">80 gr/m²</span></div>
-      <div class="info-row"><span class="lbl">Densité orge</span><span class="val">120 gr/m²</span></div>
+      <div class="info-row"><span class="lbl">Densité pois</span><span class="val">80 gr/m² (protocole : 90 gr/m²)</span></div>
+      <div class="info-row"><span class="lbl">Densité orge</span><span class="val">120 gr/m² (protocole : 75 gr/m²)</span></div>
       <div class="info-row"><span class="lbl">Pas de herse</span><span class="val">Aucun désherbage mécanique réalisé</span></div>
       <div class="section-label">Variétés</div>
       <div class="var-list">
@@ -435,7 +435,7 @@ const sites = [
         <span class="var-tag">Pulsion</span><span class="var-tag">Astéroïde</span>
         <span class="var-tag">Cortex</span><span class="var-tag">Karma</span>
       </div>
-      <div class="note-box">Essai fortement enherbé, peu de suivi en cours de culture. Récolte effectuée.</div>`
+      <div class="note-box">Essai fortement enherbé, peu de suivi en cours de culture. Récolte effectuée. Densités adaptées sans concertation (80/120 au lieu de 90/75).</div>`
   }
 ];
 
@@ -498,15 +498,13 @@ function renderList() {
 function addCard(s) {
   const statusLabel = {
     exploitable: 'Implication forte',
-    partiel: 'Peu de suivi',
-    biensuivi: 'Bien suivi, non récolté',
+    partiel: 'Implication partielle',
     perdu: 'Non récolté'
   };
   const statusColor = {
     exploitable: '#2E7D32',
     partiel: '#D97706',
-    perdu: '#DC2626',
-    biensuivi: '#D97706'
+    perdu: '#DC2626'
   };
   const st = s.statut || (s.type === 'station' ? 'station' : '');
   const badgeHtml = st && st !== 'station'
